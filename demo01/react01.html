@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../build/react.js"></script>
+    <script src="../build/JSXTransformer.js"></script>
+  </head>
+  <body>
+    <div id="re"></div>
+    <script type = "text/jsx">
+        var arr = [
+            <h1>Hello,world</h1>,
+            <h3 class="work">23333 !</h3>
+        ];
+        React.render(
+            <div class="some">{arr}</div>,
+            document.getElementById("re")
+        )
+    </script>
+  </body>
+ </html>
