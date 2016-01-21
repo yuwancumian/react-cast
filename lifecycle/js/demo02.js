@@ -70,8 +70,16 @@ var CountBox = React.createClass({
 
 
 var SubBox = React.createClass({
+    componentWillReceiveProps :function(nextProps) {
+        console.log("子组件将要获得 props"); 
+    },
     render: function() {
-        return  <p> 这是一个子组件 </p>
+        return  (
+            <div>
+                <p> 这是一个子组件 </p>
+                <div>{this.props.message}</div>
+            </div>
+        )
     }
 })
 
@@ -79,7 +87,7 @@ ReactDOM.render(
         <div>
             <Title />
             <CountBox />
-            <SubBox />
+            <SubBox message={'子组件的计数是：' + self.state.count} />
         </div>,
         document.getElementById('app')
 );
