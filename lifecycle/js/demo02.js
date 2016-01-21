@@ -69,10 +69,17 @@ var CountBox = React.createClass({
 })
 
 
+var SubBox = React.createClass({
+    render: function() {
+        return  <p> 这是一个子组件 </p>
+    }
+})
+
 ReactDOM.render(
         <div>
             <Title />
             <CountBox />
+            <SubBox />
         </div>,
         document.getElementById('app')
 );
